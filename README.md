@@ -1,6 +1,4 @@
-# Best Group
-
-Film review web app
+# Film review web app
 
 This project requires
 - python 3.10^

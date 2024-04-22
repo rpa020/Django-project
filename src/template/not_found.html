@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}
+{{movie.title}}
+{% endblock %}
+
+
+{% block content %}
+<br><br>
+	<h1 style="text-align: center;">This movie does not exist, do you want to <a style="color:cyan;" href="{% url 'add' %}"> create it </a>? </h1>
+
+{% endblock %}

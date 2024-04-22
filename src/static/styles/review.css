@@ -1,0 +1,247 @@
+.container-review {
+	width: 85%;
+	height: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 30px;
+	box-sizing: border-box;
+	background-color: #224e75;
+	border-radius: 15px;
+	align-items: center;
+	padding: 1px;
+}
+
+
+
+.rating-field {
+	max-width: 100%;
+	padding: none; 
+	margin: 15px;
+	align-items: center;
+	display: block;
+}
+
+.headline {
+	max-width: 100%;
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-bottom: 15px; 
+	margin-top: 15px;
+	display: block;
+	box-sizing: border-box;
+}
+
+.review {
+	background-color: #224e75;
+	max-width: 100%;
+	margin: 15px;
+	display: block;
+	box-sizing: border-box;
+}
+
+
+.rate-section-text1 {
+	width: 100%;
+	height: 50px;
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+	box-sizing: border-box;
+	background-color: #0e3245;
+	border-color: #224e75;
+	border-top-style: solid;
+	border-left-style: solid;
+	border-right-style: solid;
+	border-width: 5px;
+	border-radius: 15px;
+	padding: 10px;
+	padding-left: 20px;
+	text-align: left;
+}
+
+.rate-section-text2 {
+	margin-top: 150px;
+	margin-bottom: 20px;
+	width: 95%;
+	height: 50px;
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+	box-sizing: border-box;
+	background-color: #0e3245;
+	border-color: #224e75;
+	border-style: solid;
+	border-width: 5px;
+	border-bottom-width: 2px;
+	border-radius: 15px;
+	content: center;
+	padding: 10px;
+	padding-left: 20px;
+	text-align: left;
+}
+
+.sextiontxt{
+	margin: 0px; 
+	font-family: Raleway;
+	font-size: medium;
+	color: aliceblue;
+}
+
+
+#textarea {
+	width: 100%;
+	resize: vertical;
+	border-radius: 25px;
+	background-color: aliceblue;
+	padding: 15px;
+	border: none;
+	box-sizing: border-box;
+	font-family: Verdana;
+}
+
+#headlinetext {
+	width: 100%;
+	height: 35px;
+	border-radius: 25px;
+	background-color: aliceblue;
+	padding: 15px;
+	border: none;
+	box-sizing: border-box;
+	font-family: Verdana;
+}
+
+#review_button {
+	height: 40px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+.rating > input {
+	display: none; 
+}
+
+.rating {
+	display: inline-block;
+	border: 0;
+}
+
+.rating > label{
+	float: right; 
+
+}
+
+/* displaying star*/
+.rating > label:before{
+	display: inline-block;
+	font-size: 23px;
+	font-family: FontAwesome;
+	content: "\f005"; 
+	margin: 0; 
+	padding: 15px; 
+	cursor: pointer;
+
+}
+
+input:checked ~ label, label ~ label:hover, label:hover {
+	color: #ffb503;
+} 
+
+
+
+/* button css from */
+
+
+/* CSS */
+.button-29 {
+	align-items: center;
+	appearance: none;
+	background-image: radial-gradient(100% 100% at 100% 0, #00b3b3 0, #008080 100%);
+	border: 0;
+	border-radius: 25px;
+	box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+	box-sizing: border-box;
+	color: #f9f9f9;
+	cursor: pointer;
+	display: inline-flex;
+	font-family: Verdana , monospace;
+	font-weight: bold;
+	height: 48px;
+	justify-content: center;
+	line-height: 1;
+	width: 100%;
+	
+	margin-bottom: 25px;
+	overflow: hidden;
+	padding-left: 0px;
+	padding-right: 0px;
+	
+	text-align: center;
+	text-decoration: none;
+	transition: box-shadow .15s,transform .15s;
+	touch-action: manipulation;
+	white-space: nowrap;
+	will-change: box-shadow,transform;
+	font-size: 18px;
+}
+
+
+.button-29:hover {
+	box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, 
+				rgba(45, 35, 66, .3) 0 7px 13px -3px, 
+				#006767 0 -3px 0 inset;
+
+}
+
+.button-29:active {
+	box-shadow: #006767 0 3px 7px inset;
+	transform: translateY(2px);
+}
+
+
+.review_box {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: aliceblue;
+	color: darkslateblue;
+	box-sizing: border-box;
+	width: 95%;
+	height: 15%;
+	padding: 15px;
+	border-radius: 15px;
+}
+
+#user_review_headline {
+	margin: 0px; 
+	padding: 0px; 
+	font-family: Verdana;
+	font-size: 14;
+	color: #000000;
+}
+
+.user_name_review {
+	margin: 0px;
+	margin-top: 5px;
+	margin-left: 20px;
+	padding: 0px; 
+	font-family: Verdana;
+	font-size: 10;
+	color: #15008a;
+}
+
+.user_review_text {
+	margin-top: 15px; 
+	padding: 0px; 
+	font-family: Verdana;
+	font-size: 12;
+	color: #000000;
+}
+
+.star{
+	float: left;
+	margin-right: 5px;
+	margin-top: 2px;
+}

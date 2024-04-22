@@ -1,0 +1,126 @@
+/*https://www.w3schools.com/howto/howto_css_searchbar.asp*/
+
+
+.topnav{
+  overflow: hidden;
+  background-color: rgb(74, 163, 156);
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.navform{
+  display: inline;
+  
+}
+
+#navhomebutton{
+  margin-left: 0%;
+  float: left;
+  width: 0%;
+  height: 0%;
+  
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+#navhomefavicon{
+  padding: 0px;
+  margin-top: 6px;
+  width: 35px;
+  height: 35px;
+  margin-bottom: 0px;
+  margin-right: 50%;
+  margin-left: 12px;
+
+
+}
+
+#navsearchbar {
+  padding: 5px;
+  height: 20px;
+  width: 200px;
+  text-align: center;
+  border: none;
+  clear:both;
+  
+  font-size: 17px;
+  
+  margin-top: 4px;
+  margin-bottom: 8px;
+  margin-left: 10%;
+
+  
+}
+
+#navsearchbarbutton {
+  padding: 6px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  cursor: pointer;
+}
+
+#navlogin button , #navregister button , #navlogout button, #navdelete button{
+  float: right;/*
+  width: 6px;
+  height: 6px;
+  */
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+  margin-top: 4px;
+  margin-right: 18px;
+  margin-bottom: 4px;
+}
+
+.usertag {
+  background-color: #2136f3;
+  border: 1px solid grey;
+  color: pink;
+  padding: 10px;
+  cursor: default;
+  border-radius: 15px;
+
+  width: fit-content;
+  height: 100%;
+  display: inline;
+  text-align: center;
+}
+
+a#addlink {
+  text-decoration: none;
+  font-size: x-large;
+}
+
+.addtitlebutton {
+  margin-left: 2px;
+  background-color: #2196F3;
+  border: 1px solid grey;
+  border-radius:50%;
+  color: white;
+  padding: 0px 6px 0px 6px;
+  margin-bottom: -5px;
+  font-size: xx-large;
+  cursor: pointer;
+  box-sizing:content-box;
+  vertical-align: middle;
+  display: inline-block;
+  height: 30px;
+  text-align: center;
+  line-height: 23px;
+}
+
+span {
+  vertical-align: middle;
+}
+
+.addtitlebutton:hover {
+  color: silver !important;
+}

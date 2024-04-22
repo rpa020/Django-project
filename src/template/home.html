@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block styles%}
+	<link rel="stylesheet" href="/static/styles/search.css">
+{% endblock %}
+
+{% block content %}
+<center><img src="/static/logo.png" heigth="300" width="300"></center>
+
+<center>
+	<h2>Welcome to MovieNow</h2>
+		<p>MovieNow is a website designed to let users reviews movies and find reviews on movies on the click of a button.</p>
+		<p>You can search for your favorite movie using the search bar, or <a href="{% url 'add' %}" style="color: rgb(148, 148, 240);">add</a> them yourself if they are missing.</p>
+		<p>As you browse this website, you can see the different reviews other users have put on movies, as well as the overall rating.</p>
+        <p>Add your own movies and reviews to the website by <a href="{% url 'login' %}" style="color: rgb(148, 148, 240);">logging in</a> to your user, or you can <a href="{% url 'register' %}" style="color: rgb(148, 148, 240);">create</a> a new user.</p>
+		
+</center>
+<form>
+	<div class="movie_poster">
+		<div style="background-color:rgb(73, 73, 73); border-radius: 15px;"">
+			<center>
+				<strong class="movtitle" style="font-size: xx-large; color:white">Top picks</strong>
+			</center>
+		</div>
+		{% if results %}
+
+			{% for result in results %}
+			<div class="movie_display">
+				<a href="{{ result.get_absolute_url }}" >
+					<center>
+						<div style="padding: 0px 0px 10px 0px; box-sizing: content-box;">
+							<strong class="movtitle">{{result.title}}</strong><br>
+						</div>
+						<img {% if result.poster %} src={{result.poster.url}} {% endif %} heigth="300" width="300">
+					</center>
+				</a>
+			</div>
+			{% endfor %}
+		{% endif %}
+	</div>
+</form>
+
+{% endblock %}

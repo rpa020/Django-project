@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block title %}
+	Search page
+{% endblock %}
+
+
+{% block styles%}
+	<link rel="stylesheet" href="/static/styles/search.css">
+	<link rel="stylesheet" href="/static/styles/searchpagebutton.css">
+	<link rel="stylesheet" href="/static/styles/searchresult.css">
+{% endblock %}
+
+	
+{% block content %}
+	<h1 style="color:azure"><center>Search</center></h1>
+	<p>
+
+		{% if search_input %}
+			<center>Searching for {{search_input}}:</center>
+
+			{% if not results %}
+				<center>No results for "{{search_input}}" is showing up, do you want to <a href="{% url 'add' %}" style="color:cyan;">create it</a>?</center>
+			{% endif %}
+		{% endif %}
+
+		<div class="filters" style="margin-top:50px; margin-left:20px; width:120px; float:left; background-color:rgb(73, 73, 73);">
+			<strong style="color:rgb(149, 47, 218)">Category</strong></br>
+			{% for category in categories %}
+				<input form="navsearch" type="checkbox" style="margin-bottom: 20px;" name="category_option" value="{{category}}">{{category}}</br>
+			{% endfor %}
+
+			<strong style="color:rgb(149, 47, 218)">Genre</strong></br>
+			{% for genre in genres %}
+				<input form="navsearch" type="checkbox" style="margin-bottom: 20px;" name="genre_option" value="{{genre}}">{{genre}}</br>
+			{% endfor %}
+
+			<input form="navsearch" type="submit" value="filter" style="margin: auto;">
+		</div>
+
+		<div class="movie_poster" style="margin-top:100px">
+			{% if results %}
+				{% for result in results %}
+				<div class="movie_display"">
+					<a href="{{ result.get_absolute_url }}">
+						<center>
+							<div style="padding: 0px 0px 10px 0px; box-sizing: content-box;">
+								<strong class="movtitle">{{result.title}}</strong><br>
+							</div>
+							<img {% if result.poster %} src={{result.poster.url}} {% endif %} heigth="300" width="300">
+						</center>
+					</a>
+				</div>
+				{% endfor %}
+			{% endif %}
+		</div>
+	</p>
+{% endblock %}

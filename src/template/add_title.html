@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}
+Add movie
+{% endblock %}
+
+{% block styles %}
+	<link rel="stylesheet" href="/static/styles/base.css">
+	<link rel="stylesheet" href="/static/styles/add.css">
+	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway'>
+{% endblock %}
+
+{% block content %}
+
+<div class="base"> 
+	
+<div class="add_container">
+	<form method="post" enctype="multipart/form-data">
+		{% csrf_token %}
+		{{ form.as_p }}
+		<button class="button-29" role="button" type="submit">Add</button>
+	</form>
+</div>
+
+</div>
+
+
+{% endblock %}

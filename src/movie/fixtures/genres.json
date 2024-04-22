@@ -1,0 +1,10 @@
+[
+{"model": "movie.genres", "pk": 0, "fields": {"genre": "horror"}},
+{"model": "movie.genres", "pk": 1, "fields": {"genre": "action"}},
+{"model": "movie.genres", "pk": 2, "fields": {"genre": "romance"}},
+{"model": "movie.genres", "pk": 3, "fields": {"genre": "comedy"}},
+{"model": "movie.genres", "pk": 4, "fields": {"genre": "fantasy"}},
+{"model": "movie.genres", "pk": 5, "fields": {"genre": "mystery"}},
+{"model": "movie.genres", "pk": 6, "fields": {"genre": "thriller"}},
+{"model": "movie.genres", "pk": 7, "fields": {"genre": "drama"}}
+]

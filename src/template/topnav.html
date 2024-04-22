@@ -1,0 +1,46 @@
+
+{% load static %}
+<div class="topnav" >
+    <link rel="stylesheet" href="/static/styles/topnav.css">
+    <div class="navelements">
+        <a href="{% url 'home' %}" target="_self"  id="navhomebutton">
+            <img src="{% static 'icons/favicon.ico' %}" alt="Home" border="0" id="navhomefavicon">
+        </a>
+        <form method = "get" form name="searchbar" id="navsearch" class="navform" 
+        action={% url 'search' %}>
+            {% csrf_token %}
+            <input type="text" name="search" placeholder="Search..." id="navsearchbar" class="navsearchbar">
+            <button type="submit" id="navsearchbarbutton">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+
+        {% if user.is_authenticated %}
+        <div class="usertag">
+            {{request.user}} 
+            
+            <a id="addlink" href="{% url 'add' %}">
+                <div class="addtitlebutton">
+                    <span>+</span>
+                </div>
+            </a>
+        </div>
+
+        <form method="get" id="navdelete" class="navform" action="{% url 'delete' %}">
+            <button type="submit" style="background:red" onclick="return confirm('Are you sure you want to delete your user?')"> Delete User</button>
+        </form>
+        <form method="get" id="navlogout" class="navform" action="{% url 'logout' %}">
+            <button type="submit"> Logout </button>
+        </form>
+        {% else %}
+        <form method="get" id="navregister" class="navform" action="{% url 'register' %}">
+            <button type="submit"> Register  </button>
+        </form>
+        <form method="get" id="navlogin" class="navform" action="{% url 'login' %}">
+            <button type="submit"> Login  </button>
+        </form>
+        {% endif %}
+
+    </div>
+</div>
+
